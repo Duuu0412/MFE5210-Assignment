@@ -3,7 +3,7 @@
 """
 Created on Mon May  5 19:41:00 2025
 
-@author: Duuu
+@author: kkkkDuuu
 """
 #%%
 import pandas as pd
