@@ -21,7 +21,6 @@ import seaborn as sns
 
 from typing import Tuple
 #%% 数据导入和预处理
-os.chdir(r'/Users/dujiayu/Desktop/mfe/mfe5210/assignments/行业有效量价因子与行业轮动策略/STK_IndustryClassAnl')
 df_Ind = pd.read_csv('STK_IndustryClassAnl.csv', low_memory = False)
 df_Ind['Symbol'] = [str(x).zfill(6) for x in df_Ind.Symbol] #str(x).zfill(6) 将股票代码转为字符串并自动补充为6位，不足6位在其左侧添0
 df_Ind = df_Ind.rename(columns = {'Symbol' : 'Stkcd'})
@@ -35,7 +34,6 @@ df_Ind = df_Ind[df_Ind.IndustryName1 != '综合金融']
 df_Ind = df_Ind.drop_duplicates()
 
 # 匹配行业指数 
-os.chdir(r'/Users/dujiayu/Desktop/mfe/mfe5210/assignments/行业有效量价因子与行业轮动策略/Index')
 df_Fund = pd.read_csv('IDX_Idxtrd.csv')
 df_Fund = df_Fund.rename(columns = {
     'Indexcd' : 'Symbol',
